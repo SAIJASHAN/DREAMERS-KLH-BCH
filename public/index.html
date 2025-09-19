@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Doc Checker</title>
+  <style>
+    /* Basic styling */
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    button { margin-top: 1rem; padding: 0.5rem 1rem; cursor: pointer; }
+    .hidden { display: none; }
+    #monitored-urls div { margin: 0.3rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Smart Doc Checker</h1>
+
+  <section>
+    <h2>Upload Documents (at least 2)</h2>
+    <input type="file" id="file1" multiple /><br />
+    <input type="file" id="file2" multiple /><br />
+    <input type="file" id="file3" multiple /><br />
+    <button id="analyze-btn" disabled>Analyze Documents</button>
+  </section>
+
+  <section id="results-section" class="hidden">
+    <h2>Analysis Results</h2>
+    <p>Total Documents Analyzed: <span id="total-docs">0</span></p>
+    <p>Conflicts Found: <span id="total-conflicts">0</span></p>
+    <button id="generate-report-btn">Generate Report</button>
+  </section>
+
+  <section id="report-section" class="hidden">
+    <h2>Report</h2>
+    <p>Reports Generated: <span id="total-reports">0</span></p>
+    <p>Last Report Date: <span id="report-date">N/A</span></p>
+  </section>
+
+  <section>
+    <h2>Monitor URLs</h2>
+    <button id="monitor-btn">Add URL to Monitor</button>
+    <div id="monitored-urls"></div>
+  </section>
+
+  <section>
+    <h2>Usage</h2>
+    <p>Balance: $<span id="balance">0.00</span></p>
+    <p>Total Spent: $<span id="total-spent">0.00</span></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
